@@ -30,3 +30,8 @@ Route::middleware([
 Route::get('/template',function(){
     return view('layouts.master');
 });
+
+
+Route::get('/menu',function(){
+    return view('menu');
+})->name('menu');
