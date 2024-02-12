@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,11 +28,5 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/template',function(){
-    return view('layouts.master');
-});
-
-
-Route::get('/menu',function(){
-    return view('menu');
-})->name('menu');
+//Category
+Route::resource('categories', CategoriesController::class);
